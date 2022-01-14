@@ -1,6 +1,6 @@
 ---
 title: "About EKS"
-image: "EKS-News.png"
+image: "EKS.webp"
 weight: 99
 ---
 
