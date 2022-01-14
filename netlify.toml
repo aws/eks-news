@@ -1,0 +1,62 @@
+[build]
+publish = "public"
+command = "npm i postcss postcss-cli autoprefixer && git submodule add https://github.com/victoriadrake/hugo-theme-introduction.git themes/introduction && hugo --verbose --minify"
+
+[context.production.environment]
+HUGO_VERSION = "0.92.0"
+HUGO_ENV = "production"
+HUGO_ENABLEGITINFO = "true"
+
+[context.split1]
+command = "npm i postcss postcss-cli autoprefixer && git submodule add https://github.com/victoriadrake/hugo-theme-introduction.git themes/introduction && hugo --verbose --minify"
+
+[context.split1.environment]
+HUGO_VERSION = "0.92.0"
+HUGO_ENV = "production"
+
+[context.deploy-preview]
+command = "npm i postcss postcss-cli autoprefixer && git submodule add https://github.com/victoriadrake/hugo-theme-introduction.git themes/introduction && hugo --verbose -DF"
+[context.deploy-preview.environment]
+HUGO_VERSION = "0.92.0"
+# Skip all post processing in deploy previews,
+# ignoring any other settings
+[context.deploy-preview.processing]
+  skip_processing = true
+
+[context.branch-deploy]
+command = "npm i postcss postcss-cli autoprefixer && git submodule add https://github.com/victoriadrake/hugo-theme-introduction.git themes/introduction && hugo --verbose -DF"
+[context.branch-deploy.environment]
+HUGO_VERSION = "0.92.0"
+
+[context.next.environment]
+HUGO_ENABLEGITINFO = "true"
+
+# https://docs.netlify.com/configure-builds/file-based-configuration/#post-processing
+# If skip_processing = true, all other settings are ignored
+[build.processing]
+  skip_processing = true
+[build.processing.css]
+  bundle = true
+  minify = true
+[build.processing.js]
+  bundle = true
+  minify = true
+[build.processing.html]
+  pretty_urls = false
+[build.processing.images]
+  compress = true
+
+[[redirects]]
+  from = "https://eksnews.netlify.app/*"
+  to = "https://eks.news/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "no-referrer, strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    Permissions-Policy = 'fullscreen=(self "https://eks.news"), geolocation=(), camera=(), microphone=()'
