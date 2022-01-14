@@ -1,0 +1,14 @@
+<div class="section" id="footer">
+    <div class="container has-text-centered">
+    {{ with .Site.Params.footerText }}
+        {{ . | markdownify }}
+    {{ else }}
+        <span class="footer-text">
+            {{ i18n "footer_text" . | markdownify }}
+        </span>
+    {{ end }}
+        <p>
+            <a href="/privacy/" title="EKS News Privacy Policy" rel="nofollow">Privacy Policy</a>
+        </p>
+    </div>
+</div>
