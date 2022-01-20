@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "npm i postcss postcss-cli autoprefixer && git clone https://github.com/victoriadrake/hugo-theme-introduction.git themes/introduction && hugo --verbose --minify"
+command = "npm i postcss postcss-cli autoprefixer && [ -d 'themes/introduction' ] && echo 'theme exists' || git clone https://github.com/victoriadrake/hugo-theme-introduction.git themes/introduction && hugo --verbose --minify"
 
 [context.production.environment]
 HUGO_VERSION = "0.92.0"
@@ -8,14 +8,14 @@ HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
 
 [context.split1]
-command = "npm i postcss postcss-cli autoprefixer && git clone https://github.com/victoriadrake/hugo-theme-introduction.git themes/introduction && hugo --verbose --minify"
+command = "npm i postcss postcss-cli autoprefixer && [ -d 'themes/introduction' ] && echo 'theme exists' || git clone https://github.com/victoriadrake/hugo-theme-introduction.git themes/introduction && hugo --verbose --minify"
 
 [context.split1.environment]
 HUGO_VERSION = "0.92.0"
 HUGO_ENV = "production"
 
 [context.deploy-preview]
-command = "npm i postcss postcss-cli autoprefixer && git clone https://github.com/victoriadrake/hugo-theme-introduction.git themes/introduction && hugo --verbose -DF"
+command = "npm i postcss postcss-cli autoprefixer && [ -d 'themes/introduction' ] && echo 'theme exists' || git clone https://github.com/victoriadrake/hugo-theme-introduction.git themes/introduction && hugo --verbose -DF"
 [context.deploy-preview.environment]
 HUGO_VERSION = "0.92.0"
 # Skip all post processing in deploy previews,
@@ -24,7 +24,7 @@ HUGO_VERSION = "0.92.0"
   skip_processing = true
 
 [context.branch-deploy]
-command = "npm i postcss postcss-cli autoprefixer && git clone https://github.com/victoriadrake/hugo-theme-introduction.git themes/introduction && hugo --verbose -DF"
+command = "npm i postcss postcss-cli autoprefixer && [ -d 'themes/introduction' ] && echo 'theme exists' || git clone https://github.com/victoriadrake/hugo-theme-introduction.git themes/introduction && hugo --verbose -DF"
 [context.branch-deploy.environment]
 HUGO_VERSION = "0.92.0"
 
