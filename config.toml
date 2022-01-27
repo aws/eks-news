@@ -65,7 +65,7 @@ ignoreErrors = ["error-disable-taxonomy"]
         icon  = "linkedin-in" # icon name without the 'fa-'
         icon_pack = "fab"
     [[params.social]]
-        url   = "https://github.com/aws/containers-roadmap"
+        url   = "https://github.com/aws/eks-news"
         icon  = "github" # icon name without the 'fa-'
         icon_pack = "fab"
     [[params.social]]
