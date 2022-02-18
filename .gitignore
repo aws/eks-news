@@ -7,6 +7,8 @@
 /public/
 /resources/_gen/
 .hugo_build.lock
+# Theme is incorporated at build time for cleanliness required by OSPO
+/themes/
 
 # Executable may be added to repository
 hugo.exe
@@ -174,4 +176,3 @@ dist
 .svelte-kit
 
 # End of https://www.toptal.com/developers/gitignore/api/node,hugo,macos
-themes/introduction/
