@@ -4,9 +4,11 @@
 
 ### Hugo ###
 # Generated files by hugo
-#/public/
+/public/
 /resources/_gen/
 .hugo_build.lock
+# Theme is incorporated at build time for cleanliness required by OSPO
+/themes/
 
 # Executable may be added to repository
 hugo.exe
