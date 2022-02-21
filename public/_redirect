@@ -1,5 +1,0 @@
-archive/ /archives 301
-blog/ /archives 301
-/archive/eks-news-*/ /archives/:splat 301
-archive/eks-news-*/ /archives/:splat 301
-blog/eks-news-* /archives/:splat 301
