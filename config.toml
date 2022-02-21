@@ -29,24 +29,27 @@ ignoreErrors = ["error-disable-taxonomy"]
 
     # Share buttons on blog post pages
     [params.share]
-        twitter                  = false
+        twitter                  = true
         facebook                 = false
         pinterest                = false
+
+[404_description]
+    other = "Oops! Either you've found a bug (in which case, please [let us know](https://github.com/aws/eks-news/issues)) or this page doesn't exist!"
 
     # To enable giscus, the GitHub-discussions-based comment section,
     # input the repository for the discussions below. For more details, see
     # https://www.joelnitta.com/posts/2021-11-24_using-giscus/
     # and https://github.com/giscus/giscus
-    [params.giscus]
-        # repo = "github-user/github-repo" # Entering repo will enable giscus
-        repo-id = "enter-repo-id"
-        category = "Comments"
-        category-id = "enter-category-id"
-        mapping = "pathname"
-        reactions-enabled = "0"
-        emit-metadata = "0"
-        theme = "light"
-        lang = "en"
+    #[params.giscus]
+    #    # repo = "github-user/github-repo" # Entering repo will enable giscus
+    #    repo-id = "enter-repo-id"
+    #    category = "Comments"
+    #    category-id = "enter-category-id"
+    #    mapping = "pathname"
+    #    reactions-enabled = "0"
+    #    emit-metadata = "0"
+    #    theme = "light"
+    #    lang = "en"
 
     # Social icons appear in introduction and contact section. Add as many more as you like.
     # Icon pack "fab" includes social network icons, see: https://fontawesome.com/icons?d=gallery&s=brands&m=free
