@@ -1,5 +1,4 @@
 /rss    /index.xml  301
-/subscribers/af218f74-33aa-4d68-bd09-63accafadf95/archive/eks-news-* /archives/:splat 301
 /blog/eks-news-* /archives/:splat 301
 /blog /archives 301
 /archive/eks-news-* /archives/:splat 301
