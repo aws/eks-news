@@ -9,7 +9,7 @@ ignoreErrors = ["error-disable-taxonomy"]
 [params]
     themeStyle                   = "light"                  # Choose "light" or "dark" or "auto"
     favicon                      = "favicon.ico"          # Path to favicon file
-    showRSSButton                = true                   # Show rss button in navigation
+    showRSSButton                = false                   # Show rss button in navigation
     fadeIn                       = false                    # Turn on/off the fade-in effect
     fadeInIndex                  = false                   # Turn on/off the fade-in effect on the index page even if fade-in was otherwise turned off
     dateFormat                   = "2006-01-02"
@@ -74,6 +74,10 @@ ignoreErrors = ["error-disable-taxonomy"]
         url   = "https://www.reddit.com/r/aws/"
         icon  = "reddit" # icon name without the 'fa-'
         icon_pack = "fab"
+    [[params.social]]
+        url   = "/index.xml"
+        icon  = "rss" # icon name without the 'fa-'
+        icon_pack = "fa"
 #    [[params.social]]
 #        url = "mailto:youremail@email.com"  # For a direct email link, use "mailto:test@example.org".
 #        icon = "paper-plane" # icon name without the 'fa-'

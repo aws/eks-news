@@ -9,4 +9,4 @@ The latest and greatest on all things AWS Elastic Kubernetes Service, Kubernetes
 
 Keeping up with what's happening so you can stay on top of this evolving space
 
-{{< buttondown >}}
+{{< eo >}}
