@@ -33,8 +33,8 @@ ignoreErrors = ["error-disable-taxonomy"]
         facebook                 = false
         pinterest                = false
 
-[404_description]
-    other = "Oops! Either you've found a bug (in which case, please [let us know](https://github.com/aws/eks-news/issues)) or this page doesn't exist!"
+#[404_description]
+#    other = ""
 
     # To enable giscus, the GitHub-discussions-based comment section,
     # input the repository for the discussions below. For more details, see
@@ -178,3 +178,14 @@ ignoreErrors = ["error-disable-taxonomy"]
   [privacy.youtube]
     disable = false
     privacyEnhanced = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "no-referrer, strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    Permissions-Policy = 'fullscreen=(self "https://eks.news"), geolocation=(), camera=(), microphone=()'
+    Strict-Transport-Security = 'max-age=63072000; includeSubDomains; preload'
+
