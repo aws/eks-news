@@ -107,9 +107,14 @@ ignoreErrors = ["error-disable-taxonomy"]
   url     = "/#about"
   weight  = 30
 [[menu.main]]
+  name    = "Tips"
+  url     = "/#tips"
+  weight  = 40
+[[menu.main]]
   name    = "Contact"
   url     = "/#contact"
-  weight  = 40
+  weight  = 50
+
 
 [markup]
   defaultMarkdownHandler = "goldmark"

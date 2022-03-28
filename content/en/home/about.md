@@ -1,7 +1,7 @@
 ---
 title: "About EKS"
 image: "EKS.webp"
-weight: 99
+weight: 10
 ---
 
 [Amazon Elastic Kubernetes Service (Amazon EKS)](https://aws.amazon.com/eks/) is a managed service that you can use to run [Kubernetes](https://kubernetes.io/) on [AWS](https://aws.amazon.com/) without needing to install, operate, and maintain your own Kubernetes control plane or nodes. Kubernetes is an open-source system for automating the deployment, scaling, and management of containerized applications. Amazon EKS:
