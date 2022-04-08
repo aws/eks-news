@@ -71,6 +71,10 @@ ignoreErrors = ["error-disable-taxonomy"]
         icon  = "github" # icon name without the 'fa-'
         icon_pack = "fab"
     [[params.social]]
+        url   = "https://www.youtube.com/containersfromthecouch"
+        icon  = "youtube" # icon name without the 'fa-'
+        icon_pack = "fab"
+    [[params.social]]
         url   = "https://www.reddit.com/r/aws/"
         icon  = "reddit" # icon name without the 'fa-'
         icon_pack = "fab"
