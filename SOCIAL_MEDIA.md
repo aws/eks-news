@@ -33,7 +33,7 @@ Get the latest on Amazon EKS in your inbox! EKS News XXX — DESC https://eks.n
 
 ### Wednesday PM (0900 ET)
 
-EKS News is a newsletter built by me, Chris Short, open source & #Kubernetes contributor, #DevOps leader, and #GitOps Working Group co-chair. If you're an EKS user or interested in Kubernetes, subscribe today! https://eks.news/#subscribe
+EKS News is a newsletter built by the Amazon EKS Developer Advocate team. If you're an Amazon EKS customer or interested in Kubernetes, subscribe today! https://eks.news/#subscribe
 
 ### Thursday PM (1-2 PM ET)
 
