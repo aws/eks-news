@@ -9,4 +9,4 @@ aliases:
     - /issues
 ---
 
-Every issue of EKS News can be found here.
+Every issue of EKS News can be found here. [Subscribe](https://eks.news/#subscribe) to EKS News today!
