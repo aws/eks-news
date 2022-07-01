@@ -7,6 +7,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Setup timezone
+      uses: zcong1993/setup-timezone@master
+        with:
+          timezone: 'UTC'
     - name: Trigger build on Netlify
       env:
         TOKEN: ${{ secrets.NETLIFY_BUILD_HOOK_KEY }}
