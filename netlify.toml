@@ -1,32 +1,34 @@
 [build]
 publish = "public"
-command = "npm i postcss postcss-cli autoprefixer && [ -d 'themes/introduction' ] && echo 'theme exists' || git clone https://github.com/victoriadrake/hugo-theme-introduction.git themes/introduction && hugo --verbose --minify"
+command = "npm i postcss postcss-cli autoprefixer && hugo --verbose --minify"
 
 [context.production.environment]
-HUGO_VERSION = "0.101.0"
+HUGO_VERSION = "0.110.0"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
 
 [context.split1]
-command = "npm i postcss postcss-cli autoprefixer && [ -d 'themes/introduction' ] && echo 'theme exists' || git clone https://github.com/victoriadrake/hugo-theme-introduction.git themes/introduction && hugo --verbose --minify"
+command = "npm i postcss postcss-cli autoprefixer && hugo --verbose --minify"
 
 [context.split1.environment]
-HUGO_VERSION = "0.101.0"
+HUGO_VERSION = "0.110.0"
 HUGO_ENV = "production"
 
 [context.deploy-preview]
-command = "npm i postcss postcss-cli autoprefixer && [ -d 'themes/introduction' ] && echo 'theme exists' || git clone https://github.com/victoriadrake/hugo-theme-introduction.git themes/introduction && hugo --verbose -DF"
+command = "npm i postcss postcss-cli autoprefixer && hugo --verbose -DF"
+
 [context.deploy-preview.environment]
-HUGO_VERSION = "0.101.0"
+HUGO_VERSION = "0.110.0"
 # Skip all post processing in deploy previews,
 # ignoring any other settings
 [context.deploy-preview.processing]
   skip_processing = true
 
 [context.branch-deploy]
-command = "npm i postcss postcss-cli autoprefixer && [ -d 'themes/introduction' ] && echo 'theme exists' || git clone https://github.com/victoriadrake/hugo-theme-introduction.git themes/introduction && hugo --verbose -DF"
+command = "npm i postcss postcss-cli autoprefixer && hugo --verbose -DF"
+
 [context.branch-deploy.environment]
-HUGO_VERSION = "0.101.0"
+HUGO_VERSION = "0.110.0"
 
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"
