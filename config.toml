@@ -1,200 +1,149 @@
-baseURL                          = "https://eks.news/"   # Your domain name. Must end with "/"
-theme                            = "introduction"
-DefaultContentLanguage           = "en"                    # Default language for multilingual sites
-title                            = "EKS News"
-enableEmoji = true
+baseURL = "/"
+title = "EKS News"
+
 enableRobotsTXT = true
-ignoreErrors = ["error-disable-taxonomy"]
 
-[params]
-    themeStyle                   = "light"                  # Choose "light" or "dark" or "auto"
-    favicon                      = "favicon.ico"          # Path to favicon file
-    showRSSButton                = false                   # Show rss button in navigation
-    fadeIn                       = false                    # Turn on/off the fade-in effect
-    fadeInIndex                  = false                   # Turn on/off the fade-in effect on the index page even if fade-in was otherwise turned off
-    dateFormat                   = "2006-01-02"
+# Hugo allows theme composition (and inheritance). The precedence is from left to right.
+theme = ["github.com/google/docsy", "github.com/google/docsy/dependencies"]
 
-    # Configure the home page
-    [params.home]
-        introHeight              = "medium"            # Input either "medium" or "large" or "fullheight"
-        showLatest               = true                    # Show latest blog post summary
-        showAllPosts             = false                   # Set true to list all posts on home page, or set false to link to separate blog list page
-        allPostsArchiveFormat    = true                    # show all posts in an archive format
-        numberOfProjectsToShow   = 0                       # Maximum number of projects to show on home page. Unset or comment out to show all projects
-        localTime                = false                    # Show your current local time in contact section
-        timeZone                 = "America/Detroit"   # Your timezone as in the TZ* column of this list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-        timeFormat               = "en-US"                 # Language specific format to use
-    [params.projects]
-        useTwoColumns            = false                   # Use a layout with two columns instead of three
+# Will give values to .Lastmod etc.
+enableGitInfo = true
 
-    # Share buttons on blog post pages
-    [params.share]
-        twitter                  = true
-        facebook                 = false
-        pinterest                = false
+# Language settings
+contentDir = "content/en"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+# Useful when translating.
+enableMissingTranslationPlaceholders = true
 
-#[404_description]
-#    other = ""
+disableKinds = ["taxonomy", "taxonomyTerm"]
 
-    # To enable giscus, the GitHub-discussions-based comment section,
-    # input the repository for the discussions below. For more details, see
-    # https://www.joelnitta.com/posts/2021-11-24_using-giscus/
-    # and https://github.com/giscus/giscus
-    #[params.giscus]
-    #    # repo = "github-user/github-repo" # Entering repo will enable giscus
-    #    repo-id = "enter-repo-id"
-    #    category = "Comments"
-    #    category-id = "enter-category-id"
-    #    mapping = "pathname"
-    #    reactions-enabled = "0"
-    #    emit-metadata = "0"
-    #    theme = "light"
-    #    lang = "en"
+# Highlighting config
+pygmentsCodeFences = true
+pygmentsUseClasses = false
+# Use the new Chroma Go highlighter in Hugo.
+pygmentsUseClassic = false
+#pygmentsOptions = "linenos=table"
+# See https://help.farbox.com/pygments.html
+pygmentsStyle = "tango"
 
-    # Social icons appear in introduction and contact section. Add as many more as you like.
-    # Icon pack "fab" includes social network icons, see: https://fontawesome.com/icons?d=gallery&s=brands&m=free
-    # Icon pack "fas" includes solid style icons, see: https://fontawesome.com/icons?d=gallery&s=solid&m=free
-    [[params.social]]
-        url   = "https://twitter.com/awscloud"
-        icon  = "twitter" # icon name without the 'fa-'
-        icon_pack = "fab"
-#    [[params.social]]
-#        url   = "https://facebook.com/"
-#        icon  = "facebook-f" # icon name without the 'fa-'
-#        icon_pack = "fab"
-    [[params.social]]
-        url   = "https://www.linkedin.com/company/amazon-web-services"
-        icon  = "linkedin-in" # icon name without the 'fa-'
-        icon_pack = "fab"
-    [[params.social]]
-        url   = "https://github.com/aws/eks-news"
-        icon  = "github" # icon name without the 'fa-'
-        icon_pack = "fab"
-    [[params.social]]
-        url   = "https://www.youtube.com/containersfromthecouch"
-        icon  = "youtube" # icon name without the 'fa-'
-        icon_pack = "fab"
-    [[params.social]]
-        url   = "https://www.reddit.com/r/aws/"
-        icon  = "reddit" # icon name without the 'fa-'
-        icon_pack = "fab"
-    [[params.social]]
-        url   = "/index.xml"
-        icon  = "rss" # icon name without the 'fa-'
-        icon_pack = "fa"
-#    [[params.social]]
-#        url = "mailto:youremail@email.com"  # For a direct email link, use "mailto:test@example.org".
-#        icon = "paper-plane" # icon name without the 'fa-'
-#        icon_pack = "fas"
-#    [[params.social]]
-#        url   = "https://mastodon.social/"
-#        icon  = "mastodon" # icon name without the 'fa-'
-#        icon_pack = "fab"
-#        html_attributes = "rel=\"me\"" # Add rel attribute for Mastodon profile link verification
+# Configure how URLs look like per section.
+[permalinks]
+blog = "/:section/:year/:month/:day/:slug/"
 
+## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
+[blackfriday]
+plainIDAnchors = true
+hrefTargetBlank = true
+angledQuotes = false
+latexDashes = true
 
-# If you don't want to use the default menu, you can define one by yourself
-[[menu.main]]
-  name    = "Home"
-  url     = "/"
-  weight  = 0
-[[menu.main]]
-  name    = "Subscribe"
-  url     = "/#subscribe"
-  weight  = 10
-[[menu.main]]
-  name    = "Archives"
-  url     = "/archives/"
-  weight  = 20
-[[menu.main]]
-  name    = "About"
-  url     = "/#about"
-  weight  = 30
-[[menu.main]]
-  name    = "Tips"
-  url     = "/#tips"
-  weight  = 40
-[[menu.main]]
-  name    = "Contact"
-  url     = "/#contact"
-  weight  = 50
+# Image processing configuration.
+[imaging]
+resampleFilter = "CatmullRom"
+quality = 75
+anchor = "smart"
 
+[services]
+[services.googleAnalytics]
+# Comment out the next line to disable GA tracking. Also disables the feature described in [params.ui.feedback].
+#id = "UA-00000000-0"
 
-[markup]
-  defaultMarkdownHandler = "goldmark"
-  [markup.goldmark]
-  [markup.goldmark.renderer]
-    unsafe = true
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = false
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = true
-    # noClasses = true
-    # For styles, see https://xyproto.github.io/splash/docs/longer/all.html
-    style = "solarized-dark"
-    tabWidth = 4
+# Language configuration
 
 [languages]
-    [languages.en]
-        languageName     = "English"
-        languageCode     = "en-us"
-        contentDir       = "content/en"
-        weight           = 0
-        title            = "EKS News"
-        [languages.en.params]
-            description  = "EKS News: The latest and greatest on all things AWS Elastic Kubernetes Service, Kubernetes, and Cloud Native"   # Max 160 characters show in search results
-            footerText   = "This newsletter is curated by Amazon Web Services (AWS) employees"                      # Text to override default footer text (markdown allowed)
+[languages.en]
+title = "EKS News"
+description = "The Official Amazon EKS Newsletter"
+languageName ="English"
+# Weight used for sorting.
+weight = 1
 
-#    [languages.es]
-#        languageName     = "Español"
-#        languageCode     = "es"
-#        contentDir       = "content/es"
-#        weight           = 1
-#        title            = "Introducción"
-#        [languages.es.params]
-#            description  = "Descripcion del sitio web"
-#            # footerText   = ""
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+      # See a complete list of available styles at https://xyproto.github.io/splash/docs/all.html
+      style = "tango"
+      # Uncomment if you want your chosen highlight style used for code blocks without a specified language
+      # guessSyntax = "true"
 
-#    [languages.de]
-#        languageName     = "Deutsch"
-#        languageCode     = "de"
-#        contentDir       = "content/de"
-#        weight           = 2
-#        title            = "Vorstellung"
-#        [languages.de.params]
-#            dateFormat   = "2. January 2006"
-#            description  = "Beschreibung der Webseite"
-#            # footerText   = ""
+# Everything below this are Site Params
 
-[privacy]
-  [privacy.disqus]
-    disable = true
-  [privacy.googleAnalytics]
-    disable = true
-  [privacy.instagram]
-    disable = false
-    simple = false
-  [privacy.twitter]
-    disable = false
-    enableDNT = true
-    simple = false
-  [privacy.vimeo]
-    disable = false
-    simple = false
-  [privacy.youtube]
-    disable = false
-    privacyEnhanced = true
+# Comment out if you don't want the "print entire section" link enabled.
+[outputs]
+section = ["HTML", "print"]
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    Referrer-Policy = "no-referrer, strict-origin-when-cross-origin"
-    X-Content-Type-Options = "nosniff"
-    Permissions-Policy = 'fullscreen=(self "https://eks.news"), geolocation=(), camera=(), microphone=()'
-    Strict-Transport-Security = 'max-age=63072000; includeSubDomains; preload'
+[[menu.main]]
+    name = "GitHub"
+    weight = 50
+    url = "https://github.com/aws/eks-news"
 
+[[menu.main]]
+    name = "Archives"
+    weight = 30
+    url = "/archives"
+
+[params]
+copyright = "Amazon.com, Inc. or its affilliates."
+# privacy_policy = "https://policies.google.com/privacy"
+
+# First one is picked as the Twitter card image if not set on page.
+images = ['https://eks.news/images/eks-news-og-banner.jpg']
+
+github_project_repo = "https://github.com/aws/eks-news"
+
+# Uncomment this if you have a newer GitHub repo with "main" as the default branch,
+# or specify a new value if you want to reference another branch in your GitHub links
+github_branch= "main"
+
+# Google Custom Search Engine ID. Remove or comment out to disable search.
+# gcs_engine_id = "d72aa9b2712488cc3"
+
+# Enable Algolia DocSearch
+algolia_docsearch = false
+
+# Enable Lunr.js offline search
+offlineSearch = false
+
+# Enable syntax highlighting and copy buttons on code blocks with Prism
+prism_syntax_highlighting = true
+
+# User interface configuration
+[params.ui]
+# Enable to show the side bar menu in its compact state.
+sidebar_menu_compact = true
+sidebar_menu_foldable = true
+#  Set to true to disable breadcrumb navigation.
+breadcrumb_disable = false
+#  Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
+sidebar_search_disable = false
+#  Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top nav bar
+navbar_logo = true
+# Set to true to disable the About link in the site footer
+footer_about_disable = true
+
+# Adds a H2 section titled "Feedback" to the bottom of each doc. The responses are sent to Google Analytics as events.
+# This feature depends on [services.googleAnalytics] and will be disabled if "services.googleAnalytics.id" is not set.
+# If you want this feature, but occasionally need to remove the "Feedback" section from a single page,
+# add "hide_feedback: true" to the page's front matter.
+[params.ui.feedback]
+enable = true
+# The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
+yes = 'Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
+no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
+
+# Adds a reading time to the top of each doc.
+# If you want this feature, but occasionally need to remove the Reading time from a single page, 
+# add "hide_readingtime: true" to the page's front matter
+[params.ui.readingtime]
+enable = false
+
+[params.links]
+# Developer relevant links. These will show up on right side of footer and in the community page if you have one.
+[[params.links.developer]]
+	name = "GitHub"
+	url = "https://github.com/aws/eks-news"
+	icon = "fab fa-github"
+        desc = "Development takes place here!"

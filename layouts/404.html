@@ -1,13 +1,10 @@
-{{ define "title" }}
-    <h1 class="bold-title is-1">{{ i18n "404_title" . }}</h1>
-{{ end }}
+{{ define "main"}}
+    <main id="main">
+      <div>
+       <h1 id="title">Not found</h1>
+       <p>Oops! This page doesn't exist. Try going back to our <a href="{{ "/" | relURL }}">home page</a>.</p>
 
-{{ define "main" }}
-    <div class="container markdown top-pad">
-        Oops! Either you've found a bug (in which case, please <a href="https://github.com/aws/eks-news/issues" title="EKS News GitHub Repository Issues">let us know</a>) or this page doesn't exist!
-    </div>
-{{ end }}
-
-{{ define "footer" }}
-    {{ partial "footer/text.html" . }}
+       <p>You can learn how to make a 404 page like this in <a href="https://gohugo.io/templates/404/">Custom 404 Pages</a>.</p>      
+      </div>
+    </main>
 {{ end }}
