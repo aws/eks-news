@@ -80,10 +80,10 @@ section = ["HTML", "print"]
     weight = 50
     url = "https://github.com/aws/eks-news"
 
-#[[menu.main]]
-#    name = "Archives"
-#    weight = 30
-#    url = "/archives"
+[[menu.main]]
+    name = "Archives"
+    weight = 30
+    url = "/archives"
 
 [params]
 copyright = "Amazon.com, Inc. or its affilliates."
