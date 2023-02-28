@@ -90,7 +90,7 @@ copyright = "Amazon.com, Inc. or its affilliates."
 # privacy_policy = "https://policies.google.com/privacy"
 
 # First one is picked as the Twitter card image if not set on page.
-images = ['https://eks.news/images/eks-news-og-banner.png']
+images = ['https://eks.news/images/eks-news-og-banner.jpg']
 
 github_project_repo = "https://github.com/aws/eks-news"
 
