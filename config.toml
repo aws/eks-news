@@ -147,7 +147,7 @@ enable = false
 	url = "https://github.com/aws/eks-news"
 	icon = "fab fa-github"
         desc = "Development takes place here!"
-[[params.link.developer]]
+[[params.link.user]]
   name = "AWS Site Terms"
   url = "https://aws.amazon.com/terms/"
   icon = "fa fa-envelope"
