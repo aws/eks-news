@@ -4,11 +4,7 @@ title = "EKS News"
 enableRobotsTXT = true
 
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.
-# theme = ["github.com/google/docsy", "github.com/google/docsy/dependencies"]
-[module]
-replacements = "github.com/FortAwesome/Font-Awesome -> ., github.com/twbs/bootstrap -> ."
-[[module.imports]]
-path = "docsy"
+theme = ["github.com/google/docsy", "github.com/google/docsy/dependencies"]
 
 # Will give values to .Lastmod etc.
 enableGitInfo = true
