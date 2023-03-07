@@ -87,7 +87,7 @@ section = ["HTML", "print"]
 
 [params]
 copyright = "Amazon.com, Inc. or its affilliates."
-# privacy_policy = "https://policies.google.com/privacy"
+privacy_policy = "https://aws.amazon.com/privacy/"
 
 # First one is picked as the Twitter card image if not set on page.
 images = ['https://eks.news/images/eks-news-og-banner.jpg']
@@ -147,3 +147,8 @@ enable = false
 	url = "https://github.com/aws/eks-news"
 	icon = "fab fa-github"
         desc = "Development takes place here!"
+[[params.link.user]]
+  name = "AWS Site Terms"
+  url = "https://aws.amazon.com/terms/"
+  icon = "fa fa-envelope"
+  desc = "By visiting the AWS Site, you accept the Site Terms"
