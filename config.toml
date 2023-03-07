@@ -150,4 +150,5 @@ enable = false
 [[params.link.developer]]
   name = "AWS Site Terms"
   url = "https://aws.amazon.com/terms/"
+  icon = "fa fa-envelope"
   desc = "By visiting the AWS Site, you accept the Site Terms"
