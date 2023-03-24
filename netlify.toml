@@ -49,7 +49,7 @@ HUGO_ENABLEGITINFO = "true"
   compress = true
 
 [[redirects]]
-  from = "https://eksnews.netlify.app/*"
+  from = "https://eks-news.netlify.app/*"
   to = "https://eks.news/:splat"
   status = 301
   force = true
