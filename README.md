@@ -1,6 +1,6 @@
 # EKS News
 
-[EKS News](https://eks.news) is curated by the [Amazon Elastic Kubernetes Service](https://aws.amazon.com/eks/) (Amazon EKS) Developer Advocates.
+[EKS News](https://eks.news) is curated by the [Amazon Elastic Kubernetes Service](https://aws.amazon.com/eks/) (Amazon EKS) team.
 
 This newsletter intends to provide the latest and greatest on all things AWS Elastic Kubernetes Service, Kubernetes, and Cloud Native
 
