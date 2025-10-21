@@ -3,6 +3,9 @@ name: Scheduled Netlify site build
 on:
   schedule:
   - cron: '1 7 * * *'
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
