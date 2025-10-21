@@ -4,6 +4,9 @@ on:
     # hourly
     - cron: "0 * * * *"
 
+permissions:
+  issues: write
+
 jobs:
   stale:
     runs-on: ubuntu-latest
